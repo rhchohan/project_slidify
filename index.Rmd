@@ -1,0 +1,62 @@
+---
+title       : Affect on Miles Per Gallon
+subtitle    : Course Project
+author      : Rashid Chohan
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+We'll examine the factors which can affect efficiency of cars (in terms of Miles Per Gallon).
+
+The data is from Motor Trend Magazine and was published in 1974
+
+--- .class #id 
+
+This is how the data looks like
+
+```{r echo=FALSE}
+library(datasets)
+
+library(slidify)
+
+mydat = data(mtcars)
+
+fit = lm(mpg ~ .)  
+summary(fit)  
+
+
+```
+
+
+--- .class #id 
+Summary of data
+
+'''{r echo=FALSE}
+
+plot(data=mydat, mtcars, xlab = "Factors", ylab = "MPG")
+
+
+```
+
+
+
+--- .class #id 
+
+```{r echo=FALSE}
+plot(data=mydat, mtcars, xlab = "Factors", ylab = "MPG")
+
+```
+
+--- .class #id 
+Affect of several factors on MPG
+
+```{r echo=FALSE}
+plot(data=mydat, mtcars, xlab = "Factors", ylab = "MPG")
+
+
+```
